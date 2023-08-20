@@ -1,0 +1,39 @@
+
+p {
+    font-size: 16px;
+    color: rgb(53, 0, 0);
+}
+  
+  @media (min-width: 768px) {
+    p {
+      font-size: 20px;
+      color: rgb(0, 0, 88);
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    p {
+      font-size: 24px;
+      color: black;
+    }
+  }
+
+.myimg img { width: 100%; }
+
+h2{
+    color: rgba(153, 3, 78, 0.993);
+    font-family: sans-serif; 
+  }
+
+.naiyou {        /*リスト内容の背景色の指定*/
+    background:rgba(255,255,255,0.45); 
+    padding:10px;
+  }
+
+  body {       /* 背景色 背景画像 */
+     background-color: #ffffcc;            /* 背景色 */
+     background-image: url("imagepink.jpg"); /* 画像 */
+     background-size: cover;               /* 全画面 */
+     background-attachment: fixed;         /* 固定 */
+     background-position: center center;   /* 縦横中央 */
+  }
