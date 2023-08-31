@@ -28,11 +28,14 @@ h2{
 .naiyou {        /*リスト内容の背景色の指定*/
     background:rgba(255,255,255,0.45); 
     padding:10px;
+
+    line-height:1.4em;
+
   }
 
   body {       /* 背景色 背景画像 */
-     background-color: #ffffcc;            /* 背景色 */
-     background-image: url("imagePink.jpg"); /* 画像 */
+     background-color:transparent;            /* 背景色 */
+     background-image: url("imagepink.jpg"); /* 画像 */
      background-repeat: repeat-y;           /*縦方向に繰り返し*/
      background-size: cover;               /* 全画面 */
      background-attachment: fixed;         /* 固定 */
