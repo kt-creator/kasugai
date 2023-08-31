@@ -34,7 +34,7 @@ h2{
   }
 
   body {       /* 背景色 背景画像 */
-     background-image: url("imagepink.jpg"); /* 画像 */
+     background-image: url("imagePink.jpg"); /* 画像 */
      background-repeat: repeat-y;           /*縦方向に繰り返し*/
      background-size: cover;               /* 全画面 */
      background-attachment: fixed;         /* 固定 */
