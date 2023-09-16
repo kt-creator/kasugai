@@ -18,7 +18,8 @@ p {
     }
   }
 
-.myimg img { width: 100%; }
+.myimg img { width: 100%; /* background:rgba(251, 250, 250, 0.31); */}
+.mytitle { width: 100%; background:rgba(249, 248, 248, 0.31); }
 
 h2{
     color: rgba(153, 3, 78, 0.993);
