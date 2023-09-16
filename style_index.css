@@ -26,7 +26,7 @@ h2{
   }
 
 .naiyou {        /*リスト内容の背景色の指定*/
-    background:rgba(255,255,255,0.45); 
+    background:rgba(255, 206, 161, 0.31); 
     padding:10px;
 
     line-height:1.4em;
@@ -34,7 +34,8 @@ h2{
   }
 
   body {       /* 背景色 背景画像 */
-     background-image: url("imagePink.jpg"); /* 画像 */
+     /* 背景画像  ●imagePink.jpg  ●haikei.gif*/
+     background-image: url("haikei.gif"); /* 背景画像*/
      background-repeat: repeat-y;           /*縦方向に繰り返し*/
      background-size: cover;               /* 全画面 */
      background-attachment: fixed;         /* 固定 */
