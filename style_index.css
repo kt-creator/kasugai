@@ -22,9 +22,15 @@ p {
 .mytitle { width: 100%; background:rgba(249, 248, 248, 0.553); }
 
 h2{
-    color: rgba(153, 3, 78, 0.993);
-    font-family: sans-serif; 
-  }
+  color: rgba(153, 3, 78, 0.993);
+  font-family: sans-serif; 
+}
+h3{
+  font-family: sans-serif; 
+}
+h4{
+  font-family: sans-serif; 
+}
 
 .naiyou {        /*リスト内容の背景色の指定*/
     background:rgba(255, 206, 161, 0.31); 
