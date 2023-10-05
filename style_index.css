@@ -32,12 +32,12 @@ h4{
   font-family: sans-serif; 
 }
 
-.naiyou ul li{         /*リストのフォント*/
+.naiyou ul li{
   font-family: sans-serif;
 }
 
 .naiyou {        /*リスト内容の背景色の指定*/
-    background:rgba(255, 206, 161, 0.31); 
+    background:rgba(250, 223, 197, 0.656); 
     padding:10px;
 
     line-height:1.4em;
