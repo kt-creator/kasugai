@@ -33,7 +33,7 @@ h4{
 }
 
 .Box {
-  background-color: rgb(255, 254, 253);
+  background-color: rgb(253, 251, 251);
 }
 
 .naiyou ul li{
@@ -41,7 +41,7 @@ h4{
 }
 
 .naiyou {        /*リスト内容の背景色の指定*/
-    background:rgba(250, 223, 197, 0.656); 
+    background:rgba(245, 218, 245, 0.741); 
     padding:10px;
 
     line-height:1.4em;
