@@ -1,298 +1,941 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>教育を考える 初夏のつどい in 春日井</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-      background: #f4f8fc;
-      color: #1f2937;
-      line-height: 1.7;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 24px 16px 48px;
-    }
+<title>オータムフェス2026 in 春日井</title>
 
-    .hero {
-      background: #ffffff;
-      border: 1px solid #d7e3f0;
-      border-radius: 12px;
-      padding: 32px 24px;
-      text-align: center;
-      margin-bottom: 24px;
-    }
+<meta name="description"
+content="オータムフェス2026 in 春日井。2026年11月15日（日）12:00〜16:00、春日井市総合福祉センターで開催。入場無料・申込不要。">
 
-    .label {
-      display: inline-block;
-      background: #0b63b6;
-      color: #ffffff;
-      padding: 4px 16px;
-      border-radius: 999px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
+<style>
 
-    h1 {
-      margin: 0 0 12px;
-      font-size: 34px;
-      color: #0756a5;
-      line-height: 1.35;
-    }
+/* =========================
+   基本設定
+========================= */
 
-    .subtitle {
-      font-size: 24px;
-      font-weight: bold;
-      color: #0756a5;
-      margin-bottom: 24px;
-    }
+:root {
+  --blue: #0755a5;
+  --navy: #13336f;
+  --pink: #e6006d;
+  --orange: #f05a19;
+  --green: #087a43;
+}
 
-    .date {
-      font-size: 42px;
-      font-weight: bold;
-      color: #0756a5;
-      letter-spacing: 1px;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    .time {
-      font-size: 30px;
-      font-weight: bold;
-      color: #0756a5;
-      margin-bottom: 16px;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .info-box,
-    .section {
-      background: #ffffff;
-      border: 1px solid #d7e3f0;
-      border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 20px;
-    }
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
 
-    h2 {
-      margin: 0 0 16px;
-      padding-left: 12px;
-      border-left: 6px solid #0b63b6;
-      color: #0756a5;
-      font-size: 22px;
-    }
+  color: #17213a;
 
-    h3 {
-      margin: 18px 0 8px;
-      color: #0756a5;
-      font-size: 18px;
-    }
+  background:
+    linear-gradient(
+      #eaf8ff,
+      #ffffff 28%,
+      #fffaf0
+    );
+}
 
-    .event-summary {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      text-align: left;
-    }
 
-    .event-summary div {
-      background: #f7fbff;
-      border: 1px solid #e2edf8;
-      border-radius: 8px;
-      padding: 14px;
-    }
+/* =========================
+   ヘッダー
+========================= */
 
-    .program-item {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 12px;
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e7eb;
-    }
+header {
+  background:
+    linear-gradient(
+      135deg,
+      #0a62b6,
+      #23a9df
+    );
 
-    .program-item:last-child {
-      border-bottom: none;
-    }
+  color: white;
 
-    .program-time {
-      font-weight: bold;
-      color: #0756a5;
-    }
+  padding: 16px 18px;
 
-    ul {
-      margin-top: 8px;
-    }
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
-    .button-area {
-      text-align: center;
-      margin: 32px 0;
-    }
+  box-shadow: 0 2px 10px #0002;
+}
 
-    .button {
-      display: inline-block;
-      background: #0b63b6;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 14px 32px;
-      border-radius: 8px;
-      font-size: 18px;
-    }
+.nav {
+  max-width: 1040px;
+  margin: auto;
 
-    .footer {
-      font-size: 14px;
-      color: #4b5563;
-      text-align: center;
-      margin-top: 32px;
-    }
+  display: flex;
+  gap: 18px;
 
-    .flyer-wrap {
-      text-align: center;
-    }
+  align-items: center;
+  justify-content: space-between;
+}
 
-    .flyer-image {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid #d7e3f0;
-      display: block;
-    }
+.nav strong {
+  font-size: clamp(17px, 3vw, 24px);
+}
 
-    @media (max-width: 700px) {
-      h1 { font-size: 27px; }
-      .subtitle { font-size: 20px; }
-      .date { font-size: 34px; }
-      .time { font-size: 26px; }
-      .event-summary { grid-template-columns: 1fr; }
-      .program-item { grid-template-columns: 1fr; }
-    }
-  </style>
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 14px;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+main {
+  max-width: 1040px;
+  margin: auto;
+
+  padding:
+    34px
+    18px
+    60px;
+}
+
+
+/* =========================
+   トップ
+========================= */
+
+.hero {
+  text-align: center;
+
+  padding:
+    28px
+    12px
+    34px;
+}
+
+.kicker {
+  font-weight: 800;
+  color: var(--blue);
+
+  font-size:
+    clamp(17px, 2.4vw, 24px);
+}
+
+h1 {
+  font-size:
+    clamp(38px, 8vw, 78px);
+
+  line-height: 1.05;
+
+  margin:
+    10px
+    0;
+
+  color: #ef4a16;
+
+  letter-spacing: -0.04em;
+}
+
+h1 span {
+  color: #df0064;
+}
+
+.catch {
+  font-size:
+    clamp(21px, 4vw, 36px);
+
+  font-weight: 900;
+
+  margin:
+    12px
+    0;
+}
+
+.catch b:nth-child(1) {
+  color: #df0064;
+}
+
+.catch b:nth-child(2) {
+  color: #1583cf;
+}
+
+.catch b:nth-child(3) {
+  color: #16844b;
+}
+
+.lead {
+  font-size:
+    clamp(16px, 2.4vw, 21px);
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   開催概要
+========================= */
+
+.info {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 14px;
+
+  margin:
+    24px
+    0;
+}
+
+.info > div,
+.card {
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 8px 26px #183b6920;
+
+  border:
+    1px solid #dce8f3;
+}
+
+.info strong {
+
+  display: block;
+
+  color: var(--pink);
+
+  font-size: 14px;
+
+  margin-bottom: 6px;
+}
+
+.info span {
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+
+/* =========================
+   お知らせ
+========================= */
+
+.notice {
+
+  text-align: center;
+
+  background: #fff4c9;
+
+  border:
+    2px solid #f4b300;
+
+  border-radius: 16px;
+
+  padding: 14px;
+
+  font-weight: 800;
+
+  margin:
+    18px
+    0
+    34px;
+}
+
+
+/* =========================
+   見出し
+========================= */
+
+h2 {
+
+  text-align: center;
+
+  font-size:
+    clamp(28px, 5vw, 42px);
+
+  color: var(--blue);
+
+  margin:
+    42px
+    0
+    20px;
+}
+
+
+/* =========================
+   プログラム
+========================= */
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 16px;
+}
+
+.card h3 {
+
+  font-size: 26px;
+
+  margin:
+    6px
+    0
+    12px;
+}
+
+.card .time {
+
+  font-weight: 900;
+
+  border-radius: 10px;
+
+  padding:
+    5px
+    10px;
+
+  display: inline-block;
+
+  background: #e7f3ff;
+
+  color: var(--blue);
+}
+
+.card p,
+.card li {
+
+  line-height: 1.75;
+}
+
+
+/* 各プログラムの色 */
+
+.art h3 {
+  color: #6e21b7;
+}
+
+.ceremony h3 {
+  color: #ef2714;
+}
+
+.consult h3 {
+  color: #0755a5;
+}
+
+.fun h3 {
+  color: #087a43;
+}
+
+
+/* =========================
+   開催情報
+========================= */
+
+.access {
+  text-align: center;
+}
+
+.access p {
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   チラシ画像
+========================= */
+
+.poster {
+
+  margin-top: 50px;
+
+  text-align: center;
+}
+
+.poster img {
+
+  display: block;
+
+  /*
+   * ここで端末の横幅に合わせて
+   * 自動的にサイズが変わります。
+   */
+
+  width: 100%;
+
+  max-width: 1040px;
+
+  height: auto;
+
+  margin:
+    0 auto;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 10px 30px #0002;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+footer {
+
+  background: #312b78;
+
+  color: white;
+
+  text-align: center;
+
+  padding:
+    24px
+    18px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   スマホ対応
+========================= */
+
+@media (max-width: 720px) {
+
+  header {
+    position: static;
+  }
+
+  .nav {
+    display: block;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 8px;
+  }
+
+  nav a {
+
+    font-size: 13px;
+
+    margin:
+      0
+      5px;
+  }
+
+  .info,
+  .grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+  .hero {
+    padding-top: 14px;
+  }
+
+  .card {
+    padding: 17px;
+  }
+
+  .poster img {
+    border-radius: 6px;
+  }
+}
+
+
+/* 小さいスマホ */
+
+@media (max-width: 420px) {
+
+  main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  .info span {
+    font-size: 18px;
+  }
+}
+
+</style>
 </head>
+
+
 <body>
-  <main class="page">
-    <section class="hero">
-      <div class="label">参加自由</div>
-      <h1>教育を考える 初夏のつどい<br>in 春日井</h1>
-      <div class="subtitle">私立高校も無償化実現！</div>
-      <div class="date">2026年6月13日（土）</div>
-      <div class="time">13:30〜16:15</div>
-      <p>教育や進学、私学無償化について、学び・交流できるつどいです。</p>
-    </section>
 
-    <section class="info-box">
-      <h2>開催概要</h2>
-      <div class="event-summary">
-        <div>
-          <strong>日時</strong><br>
-          2026年6月13日（土）<br>
-          13:30〜16:15
-        </div>
-        <div>
-          <strong>会場</strong><br>
-          春日井市中央公民館<br>
-          春日井市柏原町1丁目97-1
-          <a href="https://maps.app.goo.gl/So6Wze66s2aMqQrb8" target="_blank">[MAP]</a>
-        </div>
-        <div>
-          <strong>アクセス</strong><br>
-          JR勝川駅から名鉄バス乗車、<br>
-          「稲口」バス停下車 徒歩5分
-        </div>
-        <div>
-          <strong>駐車場</strong><br>
-          駐車場あり
-        </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <h2>学習会</h2>
-      <h3>講師：西形 久司 先生</h3>
-      <p>東海中学・高校前副校長/現 南山男子部 教員</p>
-      <h3>テーマ</h3>
-      <p><strong>なぜ世界はこんなにもつれているのか<br>〜ウクライナ、ガザ、そして次は……〜</strong></p>
-      <p>
-        いま世界で起きている理不尽の根っこは何でしょうか。からまった糸は、元までたどらないと解くことはできません。歴史をちょっぴりさかのぼって、どこに解決の糸口があるのか、一緒に考えてみましょう。
-      </p>
-    </section>
+<!-- =====================
+     ヘッダー
+===================== -->
 
-    <section class="section">
-      <h2>学校別紹介・相談</h2>
-      <p><strong>学園の先生・父母と直接お話しできます。</strong></p>
-      <ul>
-        <li>私学無償化ってどうなってる？</li>
-        <li>大学受験ってどんな変化が起こっているの？</li>
-        <li>私学はどんな取り組みをしているの？</li>
-        <li>公立の一貫校とは何が違うの？</li>
-        <li>特進・進学・国際などのコースの違いは？</li>
-      </ul>
-      <p>学校案内パンフを多数用意しております。</p>
-      <p>紹介予定校：愛知・東海・至学館・名古屋・名電・中京大中京・東邦・高蔵・聖霊 など</p>
-    </section>
+<header>
 
-    <section class="section">
-      <h2>プログラム</h2>
-      <div class="program-item">
-        <div class="program-time">13:45〜14:00</div>
-        <div>
-          <strong>オープニング</strong><br>
-          聖霊中高アンサンブル／弁論・群舞
-        </div>
-      </div>
-      <div class="program-item">
-        <div class="program-time">14:00〜14:10</div>
-        <div><strong>私学無償化報告</strong></div>
-      </div>
-      <div class="program-item">
-        <div class="program-time">14:10〜15:20</div>
-        <div>
-          <strong>「現代世界と歴史」学習会</strong><br>
-          『なぜ世界はこんなにもつれているのか』<br>
-          講師：西形 久司 先生
-        </div>
-      </div>
-      <div class="program-item">
-        <div class="program-time">13:45〜16:15</div>
-        <div>
-          <strong>写真部合同作品展</strong><br>
-          参加予定校：東海・淑徳・南山・至学館など
-        </div>
-      </div>
-      <div class="program-item">
-        <div class="program-time">15:20〜16:15</div>
-        <div><strong>学園別地域懇談会</strong></div>
-      </div>
-      <div class="program-item">
-        <div class="program-time">15:20〜16:15</div>
-        <div>
-          <strong>私立中高 学校別紹介</strong><br>
-          紹介希望校は、ホームページからお申し込みください。
-        </div>
-      </div>
-    </section>
+<div class="nav">
 
-    <div class="button-area">
-      <a class="button" href="https://forms.gle/5dBd8ivtZQxWCcok7" target="_blank" rel="noopener noreferrer">お申し込みはこちら</a>
-      <p style="margin-top: 14px; font-weight: bold; color: #b91c1c;">申込締切：2026年6月9日（火）</p>
-    </div>
+<strong>
+オータムフェス2026 in 春日井
+</strong>
 
-    <section class="section">
-      <h2>主催・お問い合わせ</h2>
-      <p><strong>主催：</strong>私学をよくする愛知父母懇談会 春日井ブロック</p>
-      <p><strong>後援：</strong>春日井市・春日井市教育委員会、愛知県・愛知県教育委員会</p>
-      <p><strong>お問い合わせ：</strong>080-3619-7856（森）</p>
-    </section>
+<nav>
 
-    <p class="footer">教育を考える 初夏のつどい in 春日井</p>
-      <section class="section">
-      <h2>イベントチラシ</h2>
-      <div class="flyer-wrap">
-        <img src="1.png" alt="教育を考える 初夏のつどい チラシ" class="flyer-image">
-      </div>
-    </section>
+<a href="#program">
+プログラム
+</a>
 
-  </main>
+<a href="#access">
+開催情報
+</a>
+
+<a href="#poster">
+チラシ
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================
+     トップ
+===================== -->
+
+<section class="hero">
+
+<div class="kicker">
+
+私学がつくる　
+豊かな学び つながる未来
+
+</div>
+
+
+<h1>
+
+オータムフェス
+<span>2026</span>
+
+</h1>
+
+
+<div class="catch">
+
+<b>であい</b>　
+
+<b>ふれあい</b>　
+
+<b>ハーモニー</b> ♪
+
+</div>
+
+
+<p class="lead">
+
+私学の魅力を見て・聞いて・感じて
+
+<br>
+
+未来につながるひとときを
+
+</p>
+
+
+
+<div class="info">
+
+
+<div>
+
+<strong>
+日時
+</strong>
+
+<span>
+
+11月15日（日）
+
+<br>
+
+12:00〜16:00
+
+</span>
+
+</div>
+
+
+
+<div>
+
+<strong>
+会場
+</strong>
+
+<span>
+
+春日井市
+
+<br>
+
+総合福祉センター
+
+</span>
+
+</div>
+
+
+
+<div>
+
+<strong>
+参加
+</strong>
+
+<span>
+
+申込不要
+
+<br>
+
+入場無料
+
+</span>
+
+</div>
+
+
+</div>
+
+
+<div class="notice">
+
+🚗 駐車場あり　
+どなたでもご参加いただけます
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================
+     プログラム
+===================== -->
+
+<section id="program">
+
+
+<h2>
+プログラム
+</h2>
+
+
+<div class="grid">
+
+
+
+<!-- 私学合同作品展 -->
+
+<article class="card art">
+
+<span class="time">
+12:00〜16:00
+</span>
+
+<h3>
+私学合同作品展
+</h3>
+
+<p>
+
+写真部や美術部作品、
+学園祭パンフなどを展示します。
+
+</p>
+
+<p>
+
+<b>
+参加予定校：
+</b>
+
+東海中学高校、
+愛知淑徳中学高校、
+南山中学高校 など
+
+</p>
+
+</article>
+
+
+
+<!-- 記念式典 -->
+
+<article class="card ceremony">
+
+<span class="time">
+13:30〜15:00
+</span>
+
+<h3>
+記念式典
+</h3>
+
+
+<p>
+
+<b>
+オープニングステージ
+</b>
+
+</p>
+
+
+<ul>
+
+<li>
+聖霊中学校 聖歌隊合唱
+</li>
+
+<li>
+東海中学高校
+オーケストラ部
+アンサンブル演奏
+</li>
+
+<li>
+高校生フェスティバル
+</li>
+
+<li>
+希望プロジェクト
+（体験発表、群舞など）
+</li>
+
+</ul>
+
+
+<p>
+
+私学の現状報告、
+来賓のご挨拶、
+その他
+
+</p>
+
+</article>
+
+
+
+<!-- 私学進学相談 -->
+
+<article class="card consult">
+
+<span class="time">
+
+12:00〜16:00
+（式典時間を除いて）
+
+</span>
+
+
+<h3>
+私学進学相談
+</h3>
+
+
+<p>
+
+私立中学・高校の先生に、
+進学に関するご相談ができます。
+
+<br><br>
+
+ぜひお気軽に
+お立ち寄りください。
+
+</p>
+
+</article>
+
+
+
+<!-- お楽しみ企画 -->
+
+<article class="card fun">
+
+<span class="time">
+12:00〜15:30
+</span>
+
+
+<h3>
+お楽しみ企画
+</h3>
+
+
+<p>
+
+「いろんな紙飛行機を作って
+飛ばしてみよう！」
+
+など、
+
+お子さまから大人まで
+楽しめる企画を
+ご用意しています。
+
+</p>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================
+     開催情報
+===================== -->
+
+<section
+id="access"
+class="access">
+
+
+<h2>
+開催情報
+</h2>
+
+
+<p>
+
+<b>
+会場：
+</b>
+
+春日井市
+総合福祉センター
+大ホール 他
+
+<br>
+
+
+<b>
+住所：
+</b>
+
+春日井市浅山町1丁目2-61
+
+<br>
+
+
+<b>
+お問い合わせ：
+</b>
+
+080-3619-7856（森）
+
+</p>
+
+
+</section>
+
+
+
+<!-- =====================
+     チラシ
+===================== -->
+
+<section
+id="poster"
+class="poster">
+
+
+<h2>
+イベントチラシ
+</h2>
+
+
+<p>
+
+チラシをタップすると、
+端末の画面幅に合わせて
+見やすく表示されます。
+
+</p>
+
+
+<img
+src="1.png"
+alt="オータムフェス2026 in 春日井 チラシ"
+loading="lazy">
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================
+     フッター
+===================== -->
+
+<footer>
+
+後援：
+春日井市・春日井市教育委員会、
+愛知県・愛知県教育委員会
+
+<br>
+
+主催：
+私学をよくする愛知父母懇談会
+春日井ブロック
+
+</footer>
+
+
 </body>
 </html>
